@@ -37,14 +37,14 @@
 
 #define debug Serial
 #define DEBUG_EN 1
-#define UART_MAX_LEN   216
+#define UART_MAX_LEN   256
 
 #ifndef UART_DELAY
 #define UART_DELAY 100
 #endif
 
 #ifndef UART_TIMEOUT
-#define UART_TIMEOUT 8000 //TODO make default 3000 again
+#define UART_TIMEOUT 10000 //TODO make default 3000 again
 #endif
 
 #define DEFAULT_RX 0
@@ -54,8 +54,8 @@
 
 #define DEFAULT_PORT 8468
 
-#define MAX_RESEND_CNT  2
-#define TIME_OUT_MS     2000
+#define MAX_RESEND_CNT 1 
+#define TIME_OUT_MS     10000
 
 /**class ATSerial ,provide data transfer interface.
  * 

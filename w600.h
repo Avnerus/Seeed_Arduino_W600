@@ -165,7 +165,7 @@ class AtWifi:public ATSerial
 
 
         // close socket
-        bool wifiCloseSpecSocket(int32_t socket);
+        bool wifiCloseSpecSocket(int socket);
 
         //Set default socket for communication.
         bool wifiSetDefaultSocket(int32_t socket);

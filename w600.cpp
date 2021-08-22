@@ -336,13 +336,13 @@ bool AtWifi::recvData(uint8_t *recv_msg,uint32_t *len)
 //     return ATSerial::sendCmdAndCheckRsp(_cmd_buffer,RSP_OK_equal,_resp_buffer);
 // }
 
-// bool AtWifi::wifiCloseSpecSocket(int socket)
-// {
-//     ATSerial::flush();
-//     sprintf_P(_cmd_buffer,PSTR("AT+SKCLS=%d"),socket);
-//     strcat(_cmd_buffer,AT_enter);
-//     return ATSerial::sendCmdAndCheckRsp(_cmd_buffer,RSP_OK,_resp_buffer);
-// }
+bool AtWifi::wifiCloseSpecSocket(int socket)
+{
+    ATSerial::flush();
+     sprintf_P(_cmd_buffer,PSTR("AT+SKCLS=%d"),socket);
+     strcat(_cmd_buffer,AT_enter);
+     return ATSerial::sendCmdAndCheckRsp(_cmd_buffer,RSP_OK,_resp_buffer);
+}
 
 // bool AtWifi::wifiSetDefaultSocket(int32_t socket)
 // {
